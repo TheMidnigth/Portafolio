@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --colorPrincipal:#48f;
+    --colorSecundario:#ffffff;
+    --colorTerciera:#000000;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 90px; 
+    z-index: 1000;
+}
+
+.header__logo{
+    font: 600 30px "Poppins";
+    color: var(--colorTerciera);
+}
+
+.header__navbar{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.navbar__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.list__item{
+    margin: 0 10px;
+}
+
+.item__link{
+    font: 500 20px "Noto Sans";
+    color: var(--colorTerciera);
+    
+}
+
+.link--blue{
+    color: var(--colorPrincipal);
+}
+
+.sectioninicio{
+    margin: 300px 0 0 80px;
+}
+
+.content__title{
+    font: 700 50px "Poppins";
+}
+
+.content__title2{
+    font: 700 35px "Poppins";
+    margin: -8px 0 5px 0;
+}
+
+.content__text{
+    font: 400 17px "Montserrat";
+    width: 100%;
+    max-width: 900px;
+    margin: 0 0 20px 0;
+}
+
+.content__btn{
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+    font: 400 17px "Noto Sans";
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .7s ease,box-shadow .7s ease;
+    display: inline-block;
+    box-shadow: none;
+    margin: 0 20px 0 0;
+}
+
+.content__btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 20px var(--colorPrincipal);
+}
+
+.sectioninicio__content i{
+    border: 1px solid var(--colorPrincipal);
+    border-radius: 50%;
+    color: var(--colorPrincipal);
+    padding: 10px;
+    font: 500 20px "Noto Sans";
+    margin: 0 10px 0 0;
+}
