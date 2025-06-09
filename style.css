@@ -129,7 +129,6 @@ body{
 }
 
 
-
 .content__text{
     font: 400 17px "Montserrat";
     width: 100%;
@@ -227,12 +226,14 @@ body{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     display: inline-block;
     transform: scale(1);
-    transition: transform .7s ease;
+    transition: transform .7s ease,border .7s ease;
     cursor: pointer;
 }
 
 .card__item:hover{
-    transform: scale(1.1)
+    transform: scale(1.1);
+    border: 3px solid var(--colorPrincipal);
+    
 }
 
 .item__icon{
@@ -270,3 +271,59 @@ body{
     font: 500 15px/1.5 "Montserrat";
     padding: 0 0 0 10px;
 }
+
+/* Section Resumen */
+.resumen{
+    height: 100vh;
+    background: 
+    radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(221, 160, 221, 0.85), transparent 55%);
+    background-color: #ffffff; /* color base opcional */
+    z-index: 0;
+}
+
+.resumen__container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+}
+
+.container__box .box__title{
+    font:700 50px "Poppins";
+    width: 600px;
+    margin: 0 0 0 20px;
+}
+
+.container__box .box__description{
+    font: 500 17px "Montserrat";
+    margin: 20px 0 20px 20px;
+}
+
+.detalles__resumen .resumen__text{
+    font: 500 17px "Montserrat";
+    margin: 20px 0 20px 0;
+}
+
+.detalles__resumen .resumen__title{
+    font: 700 50px "Poppins";
+
+}
+
+.title--blue{
+    color: var(--colorPrincipal);
+}
+
+.container__box .box__button{
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    outline: none;
+    border: none;
+    margin: 0 0 20px 20px;
+    font: 600 18px "Noto Sans";
+    border-radius: 10px;
+    color: var(--colorSecundario);
+    background-color: var(--colorPrincipal);
+    cursor: pointer;
+}
+
