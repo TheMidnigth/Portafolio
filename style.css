@@ -1,26 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-:root{
-    --colorPrincipal:#48f;
-    --colorSecundario:#ffffff;
-    --colorTerciera:#000000;
+:root {
+    --colorPrincipal: #48f;
+    --colorSecundario: #ffffff;
+    --colorTerciera: #000000;
+    --colorCuartario:#090e90;
 }
 
-body{
+body {
     background-color: #f5f5f5;
 }
 
-.contentradiantes{
+.contentradiantes {
     height: 100vh;
-    background: 
-    radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(221, 160, 221, 0.85), transparent 55%);
-    background-color: #ffffff; /* color base opcional */
+    background:
+        radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(221, 160, 221, 0.85), transparent 55%);
+    background-color: #ffffff;
+    /* color base opcional */
     z-index: 0;
 }
 
@@ -30,25 +32,25 @@ body{
     left: 0;
     width: 100%;
     height: 100px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0 90px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
     z-index: 1000;
 }
 
-.header__logo{
+.header__logo {
     font: 600 30px "Poppins";
     color: var(--colorTerciera);
 }
 
-.header__navbar{
+.header__navbar {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.navbar__list{
+.navbar__list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -56,30 +58,30 @@ body{
     align-items: center;
 }
 
-.list__item{
+.list__item {
     margin: 0 10px;
 }
 
-.item__link{
+.item__link {
     font: 500 20px "Noto Sans";
     color: var(--colorTerciera);
     transition: color .7s ease;
 }
 
-.link--blue{
+.link--blue {
     color: var(--colorPrincipal);
 }
 
-.link--hover:hover{
+.link--hover:hover {
     color: var(--colorPrincipal);
 }
 
 /* Section Inicio */
-.sectioninicio{
+.sectioninicio {
     margin: 200px 0 0 80px;
 }
 
-.content__title{
+.content__title {
     font: 700 50px "Poppins";
 }
 
@@ -89,23 +91,24 @@ body{
     margin: -8px 0 5px 0;
 }
 
-.sectioninicio__content .content__title2 span{
+.sectioninicio__content .content__title2 span {
     display: inline-block;
     position: relative;
     color: transparent;
-    -webkit-text-stroke:.07rem var(--colorPrincipal) ;
+    -webkit-text-stroke: .07rem var(--colorPrincipal);
     animation: display-text 16s linear infinite;
     animation-delay: calc(-4s * var(--i));
 }
 
-@keyframes display-text{
+@keyframes display-text {
+
     25%,
-    100%{
+    100% {
         display: none;
     }
 }
 
-.sectioninicio__content .content__title2 span::before{
+.sectioninicio__content .content__title2 span::before {
     content: attr(data-text);
     position: absolute;
     width: 0;
@@ -113,30 +116,31 @@ body{
     color: var(--colorPrincipal);
     white-space: nowrap;
     overflow: hidden;
-    animation: fill-text 4s linear  infinite;
+    animation: fill-text 4s linear infinite;
 }
 
-@keyframes fill-text{
+@keyframes fill-text {
+
     10%,
-    100%{
+    100% {
         width: 0;
     }
 
     70%,
-    90%{
+    90% {
         width: 100%;
     }
 }
 
 
-.content__text{
+.content__text {
     font: 400 17px "Montserrat";
     width: 100%;
     max-width: 900px;
     margin: 0 0 20px 0;
 }
 
-.content__btn{
+.content__btn {
     background-color: var(--colorPrincipal);
     color: var(--colorSecundario);
     font: 400 17px "Noto Sans";
@@ -144,16 +148,16 @@ body{
     border-radius: 30px;
     cursor: pointer;
     transform: scale(1);
-    transition: transform .7s ease,box-shadow .7s ease;
+    transition: transform .7s ease, box-shadow .7s ease;
     display: inline-block;
     margin: 0 20px 0 0;
 }
 
-.content__btn:hover{
+.content__btn:hover {
     transform: scale(1.1);
 }
 
-.sectioninicio__content i{
+.sectioninicio__content i {
     border: 1px solid var(--colorPrincipal);
     border-radius: 50%;
     color: var(--colorPrincipal);
@@ -163,37 +167,38 @@ body{
     display: inline-block;
     transform: scale(1);
     transition: transform .7s ease;
-    
+
 }
 
-.sectioninicio__content i:hover{
+.sectioninicio__content i:hover {
     transform: scale(1.1);
 }
 
 
 /* Section Service */
-.service{
+.service {
     height: 100vh;
-    background: 
-    radial-gradient(circle at top left, rgba(221, 160, 221, 0.85), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(173, 216, 230, 0.85), transparent 55%);
-    background-color: #ffffff; /* color base opcional */
+    background:
+        radial-gradient(circle at top left, rgba(221, 160, 221, 0.85), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(173, 216, 230, 0.85), transparent 55%);
+    background-color: #ffffff;
+    /* color base opcional */
     z-index: 0;
 }
 
-.service__content .content__titulo{
+.service__content .content__titulo {
     font: 700 45px "Poppins";
     text-align: center;
-    padding:60px 0 0 0;
+    padding: 60px 0 0 0;
     position: relative;
 
 }
 
-.service__content .content__titulo::before{
+.service__content .content__titulo::before {
     content: "";
     position: absolute;
     bottom: -2px;
-    left:40.1%;
+    left: 40.1%;
     width: 100%;
     max-width: 80px;
     height: 5px;
@@ -201,12 +206,12 @@ body{
 
 }
 
-.service__content .titulo__blue{
+.service__content .titulo__blue {
     color: var(--colorPrincipal);
 }
 
-.content__cards{
-    justify-content:center;
+.content__cards {
+    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     display: flex;
@@ -214,11 +219,10 @@ body{
     margin: 50px 0 0 0;
 }
 
-.card__item{
-    flex: 0 1 30%;
-    min-width:250px;
+.card__item {
+    flex: 0 1 450px;
     background-color: rgba(255, 255, 255, 0.1);
-    border: 4px solid  rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 20px 10px;
     backdrop-filter: blur(20px);
@@ -226,32 +230,32 @@ body{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     display: inline-block;
     transform: scale(1);
-    transition: transform .7s ease,border .7s ease;
+    transition: transform .7s ease, border .7s ease;
     cursor: pointer;
 }
 
-.card__item:hover{
+.card__item:hover {
     transform: scale(1.1);
     border: 3px solid var(--colorPrincipal);
-    
+
 }
 
-.item__icon{
+.item__icon {
     position: relative;
 }
 
-.icon__item i{
+.icon__item i {
     font-size: 28px;
     display: flex;
 }
 
-.icon__item i:first-child{
+.icon__item i:first-child {
     color: var(--colorPrincipal);
     margin: 0 0 15px 10px;
     font-size: 35px;
 }
 
-.icon__item i:last-child{
+.icon__item i:last-child {
     position: absolute;
     top: -4px;
     right: 20px;
@@ -261,59 +265,72 @@ body{
     color: var(--colorSecundario);
 }
 
-.card__title{
+.card__title {
     color: var(--colorPrincipal);
     font: 600 25px "Poppins";
     margin: 0 0 10px 10px;
 }
 
-.card__text{
+.card__text {
     font: 500 15px/1.5 "Montserrat";
     padding: 0 0 0 10px;
 }
 
 /* Section Resumen */
-.resumen{
+.resumen {
     height: 100vh;
-    background: 
-    radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(221, 160, 221, 0.85), transparent 55%);
-    background-color: #ffffff; /* color base opcional */
+    background:
+        radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(221, 160, 221, 0.85), transparent 55%);
+    background-color: #ffffff;
+    /* color base opcional */
     z-index: 0;
 }
 
-.resumen__container{
+.resumen__container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 5rem;
 }
 
-.container__box .box__title{
-    font:700 50px "Poppins";
+.container__box .box__title {
+    font: 700 50px "Poppins";
     width: 600px;
     margin: 0 0 0 20px;
 }
 
-.container__box .box__description{
+.container__box .box__description {
     font: 500 17px "Montserrat";
     margin: 20px 0 20px 20px;
 }
 
-.detalles__resumen .resumen__text{
+.detalles__resumen .resumen__text {
     font: 500 17px "Montserrat";
     margin: 20px 0 20px 0;
 }
 
-.detalles__resumen .resumen__title{
+.detalles__resumen .resumen__title {
     font: 700 50px "Poppins";
+    position: relative;
+}
+
+.detalles__resumen .resumen__title::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0.2rem;
+    width: 100%;
+    max-width: 50px;
+    height: 5px;
+    background-color: var(--colorPrincipal);
 
 }
 
-.title--blue{
+.title--blue {
     color: var(--colorPrincipal);
 }
 
-.container__box .box__button{
+.container__box .box__button {
     width: 100%;
     max-width: 400px;
     height: 60px;
@@ -327,3 +344,94 @@ body{
     cursor: pointer;
 }
 
+.detalles__resumen{
+    
+}
+
+.resumen__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 795px;
+    height: 500px;
+    overflow: auto;
+}
+
+.resumen__cards::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.resumen__cards::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.resumen__cards::-webkit-scrollbar-thumb {
+    background: var(--colorPrincipal);
+    border-radius: 10px;
+}
+
+
+
+.cards__item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    cursor: pointer;
+    flex: 0 1 380px;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+}
+
+.cards__item .item__span {
+    font: 800 15px "Noto Sans";
+    color: var(--colorCuartario);
+
+}
+
+.cards__item .item__title {
+    color: var(--colorPrincipal);
+    font: 600 25px "Poppins";
+}
+
+.cards__item .item__text {
+    font: 500 15px/1.5 "Montserrat";
+    margin-top: 15px;
+
+}
+
+.item__referencia i{
+    color: var(--colorCuartario);
+}
+
+.item__referencia{
+    font: 500 16px "Noto Sans";
+}
+
+.resumen__skill{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.skill__icon{
+    flex: 0 1 150px;
+    background-color: var(--colorPrincipal);
+    border-radius: 10px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.skill__icon i{
+    font-size: 85px;
+    color: var(--colorSecundario);
+}
