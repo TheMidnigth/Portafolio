@@ -9,7 +9,7 @@
     --colorPrincipal: #48f;
     --colorSecundario: #ffffff;
     --colorTerciera: #000000;
-    --colorCuartario:#090e90;
+    --colorCuartario: #090e90;
 }
 
 body {
@@ -278,6 +278,7 @@ body {
 
 /* Section Resumen */
 .resumen {
+    padding: 50px 0 0 0;
     height: 100vh;
     background:
         radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
@@ -302,6 +303,23 @@ body {
 .container__box .box__description {
     font: 500 17px "Montserrat";
     margin: 20px 0 20px 20px;
+}
+
+.detalles__resumen {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+}
+
+.detalles__resumen.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transform: translateY(0);
 }
 
 .detalles__resumen .resumen__text {
@@ -344,9 +362,6 @@ body {
     cursor: pointer;
 }
 
-.detalles__resumen{
-    
-}
 
 .resumen__cards {
     display: flex;
@@ -354,7 +369,7 @@ body {
     gap: 20px;
     width: 100%;
     max-width: 795px;
-    height: 500px;
+    height: 550px;
     overflow: auto;
 }
 
@@ -404,15 +419,15 @@ body {
 
 }
 
-.item__referencia i{
+.item__referencia i {
     color: var(--colorCuartario);
 }
 
-.item__referencia{
+.item__referencia {
     font: 500 16px "Noto Sans";
 }
 
-.resumen__skill{
+.resumen__skill {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -420,7 +435,8 @@ body {
     max-width: 900px;
 }
 
-.skill__icon{
+.skill__icon {
+    position: relative;
     flex: 0 1 150px;
     background-color: var(--colorPrincipal);
     border-radius: 10px;
@@ -431,7 +447,36 @@ body {
     cursor: pointer;
 }
 
-.skill__icon i{
+.skill__icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--colorCuartario);
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    white-space: nowrap;
+    z-index: 10;
+    font: 500 20px "Noto Sans";
+}
+
+.skill__icon:hover::after {
+    opacity: 1;
+}
+
+.skill__icon i {
     font-size: 85px;
     color: var(--colorSecundario);
+}
+
+.detalles__resumen .resumen__acerca {
+    font: 500 17px/1.9 "Montserrat";
+    margin: 20px 0 0 0;
+
 }
