@@ -78,16 +78,16 @@ body {
 
 /* Section Inicio */
 .sectioninicio {
-    margin: 200px 0 0 80px;
+    margin: 100px 0 0 80px;
 }
 
 .content__title {
-    font: 700 50px "Poppins";
+    font: 700 60px "Poppins";
 }
 
 .sectioninicio__content .content__title2 {
     display: inline-block;
-    font: 700 35px "Poppins";
+    font: 700 45px "Poppins";
     margin: -8px 0 5px 0;
 }
 
@@ -174,26 +174,26 @@ body {
     transform: scale(1.1);
 }
 
-.content__cantidad{
+.content__cantidad {
     display: flex;
     flex-wrap: wrap;
     gap: 8rem;
-    margin-top: 90px;
+    margin-top: 150px;
 }
 
-.content__cantidad .cantidad__cards{
+.content__cantidad .cantidad__cards {
     flex: 0 1 150px;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.cantidad__cards .cards__number{
-    font: 800 55px "Noto Sans";
+.cantidad__cards .cards__number {
+    font: 800 65px "Noto Sans";
     color: var(--colorPrincipal);
 }
 
-.cantidad__cards .cards__title{
+.cantidad__cards .cards__title {
     font: 500 15px/1.2 "Poppins";
 }
 
@@ -201,10 +201,6 @@ body {
 /* Section Service */
 .service {
     height: 100vh;
-    background:
-        radial-gradient(circle at top left, rgba(221, 160, 221, 0.85), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(173, 216, 230, 0.85), transparent 55%);
-    background-color: #ffffff;
     /* color base opcional */
     z-index: 0;
 }
@@ -303,10 +299,6 @@ body {
 .resumen {
     padding: 50px 0 0 0;
     height: 100vh;
-    background:
-        radial-gradient(circle at top left, rgba(173, 216, 230, 0.85), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(221, 160, 221, 0.85), transparent 55%);
-    background-color: #ffffff;
     /* color base opcional */
     z-index: 0;
 }
@@ -393,7 +385,7 @@ body {
     width: 100%;
     max-width: 795px;
     height: 550px;
-    overflow-y: hidden; 
+    overflow-y: hidden;
 }
 
 .resumen__cards:hover {
@@ -513,3 +505,261 @@ body {
 
 
 /* Section contactos */
+.contactos {
+    padding: 50px 0 0 0;
+    height: 100vh;
+    z-index: 0;
+}
+
+.contactos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.container__item {
+    flex: 0 1 600px;
+}
+
+
+.item__informacion .informacion__title {
+    font: 700 55px "Poppins";
+    margin: 0 0 25px 0;
+    position: relative;
+}
+
+.item__informacion .informacion__title::before {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    left: 1%;
+    background-color: var(--colorPrincipal);
+    width: 100%;
+    max-width: 60px;
+    height: 5px;
+
+}
+
+.title--blue {
+    color: var(--colorPrincipal);
+}
+
+.item__informacion .informacion__text {
+    font: 500 18px/1.3 "Montserrat";
+    color: var(--colorTerciera);
+    margin: 0 0 25px 0;
+}
+
+.icon__opcion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon__cuadro {
+    background-color: var(--colorPrincipal);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.opcion__title {
+    margin: 0;
+    font: 600 17px "Poppins";
+    color: var(--colorCuartario);
+}
+
+.opcion__number {
+    margin: 0;
+    font: 600 17px "Montserrat";
+}
+
+/* Formulario Contactos */
+.item__formulario{
+    background-color:transparent;
+    border-radius: 8px;
+    height: 650px;
+    
+}
+
+.formulario__contactos .contactos__title{
+    font: 700 55px "Poppins";
+    margin:  0 0 20px 0;
+    text-align: center;
+}
+
+.formulario__contactos .contactos__input{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 340px));
+    column-gap: 2rem; /* puedes aumentar a 2.5rem o más si quieres más espacio */
+    row-gap: 1.5rem;  /* espacio entre filas, opcional */
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.formulario__contactos .input--textarea{
+    margin-top: 20px;
+    
+}
+
+.item__box{
+    position: relative;
+
+}
+
+.item__box .label{
+    font: 500 15px "Montserrat";
+    position: absolute;
+    color:#8d8d8d ;
+    pointer-events: none;
+    background-color: transparent;
+    left: 25px;
+    top: 10px;
+    transform: translateY(0.6rem);
+    transition: all 0.3s ease;
+}
+
+
+.item__box input{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 300px;
+    height: 55px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.item__box textarea{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 615px;
+    min-height: 280px;
+    field-sizing: content;
+    letter-spacing: 1px;
+    outline: none;
+    
+}
+
+.item__box textarea:focus,
+.item__box input:focus{
+    outline: none;
+    border: 2px solid #0034de;
+}
+
+.item__box input:focus~.label,
+.item__box input:not(:placeholder-shown)~.label,
+.item__box textarea:focus~.label,
+.item__box textarea:not(:placeholder-shown)~.label{
+    background-color: #fff;
+    transform: translateY(-80%) translateX(-10px) scale(0.8);
+    padding: 0 5px;
+    color: #0034de;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 100px;
+}
+
+.box__icon i{
+    position: absolute;
+    top: 17px;
+    left: 92%;
+    font: 900 18px "Montserrat";
+}
+
+.box__icon .ri-check-line {
+    background-color: #34A853;
+    border-radius: 50%;
+    padding: 1px 1px;
+    color: #fff;
+    display:none ;
+}
+
+.box__icon .ri-close-line {
+    background-color: #fd1f1f;
+    border-radius: 50%;
+    padding: 1px 1px;
+    color: #fff;
+    display: none;
+}
+
+.icon--changed i{
+    left: 36rem;
+}
+
+.input__item .item__message{
+    font: 600 15px "Montserrat";
+    margin: 15px 0 0px 3px;
+    display: none;
+}
+
+
+.formulario__contactos .contactos__advertencia{
+    font: 700 15px "Montserrat";
+    max-width: 650px;
+    background-color: #fd1f1f;
+    padding: 20px 15px;
+    border-radius: 5px;
+    grid-column: span 2;
+    margin: 20px 0 0 2px;
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+}
+
+.formulario__contactos .contactos__advertencia i{
+    font-size: 1.7rem;
+    margin: -5px 10px 0 0;
+}
+
+.contactos__button{
+    grid-column: span 2;
+    margin:5px 0 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario__contactos .contactos__button .button__formulario{
+    font: 700 20px "Montserrat";
+    background-color: #48f;
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 20px;
+    border: none;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: background-color .7s ease;
+}
+
+.formulario__contactos .contactos__button .button__formulario:hover{
+    background-color: #0034de;
+}
+
+.swal2-title {
+    font-family:"Poppins";
+}
